@@ -49,7 +49,7 @@
   height: calc(100% - 100px);
   position: absolute;
   right: 0;
-  background-image: url("/img/background.jpg");
+  background-image: url("../img/background.jpg");
   overflow: hidden;
 }
 
