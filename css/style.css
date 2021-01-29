@@ -3,6 +3,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Lato";
 }
 
 .container {
@@ -16,7 +17,7 @@
 }
 
 .sidebar {
-  background-color: red;
+  border: 2px solid black;
   width: 35%;
   height: 100%;
 }
@@ -37,4 +38,59 @@
   position: absolute;
   right: 0;
 }
+
+img {
+  height: 80px;
+  border-radius: 100%;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.padding-10 {
+  padding: 10px;
+}
+
+.fa-style {
+  font-size: 25px;
+  padding-right: 20px;
+  color: #b1b1b1;
+  margin-top: 27px;
+}
+
 /* /GENERAL & CONTAINERS */
+
+/* SIDEBAR */
+.top-sidebar {
+  height: 80px;
+  background-color: #eaeaea;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-name {
+  display: inline-block;
+  vertical-align: 1.5em;
+  font-size: 22px;
+}
+
+.notifications {
+  height: 90px;
+  background-color: #8edafc;
+}
+
+.bell-container {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: #fff;
+}
+
+.notifications i {
+  font-size: 39px;
+  margin-top: 5px;
+  color: #8edafc;
+}
+/* /SIDEBAR */
