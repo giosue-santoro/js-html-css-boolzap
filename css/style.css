@@ -1,0 +1,40 @@
+/* GENERAL & CONTAINERS */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 80%;
+  height: 95%;
+  min-width: 950px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sidebar {
+  background-color: red;
+  width: 35%;
+  height: 100%;
+}
+
+.box-bottom {
+  background-color: green;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  min-height: 100px;
+  width: calc(100% - 35%);
+}
+
+.main {
+  background-color: blue;
+  width: 65%;
+  height: calc(100% - 100px);
+  position: absolute;
+  right: 0;
+}
+/* /GENERAL & CONTAINERS */
