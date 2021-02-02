@@ -3,6 +3,7 @@ var app = new Vue({
     
     data: {
         contactIndex: 0,
+        activeMessage: '',
         contacts: [
             {
                 name: 'Michele',
@@ -103,6 +104,20 @@ var app = new Vue({
             } else {
                 return 'received-message'
             }
+        },
+
+        botResponse: function() {
+            setTimeout(() => {
+                this.activeMessage = 'ok';
+                this.contacts[this.contactIndex].messages.push({date:'10/01/2020 15:30:55', text: this.activeMessage, status:'received'})
+                this.activeMessage='';
+            }, 1000);
+        },
+
+        messagePush: function() {
+            this.contacts[this.contactIndex].messages.push({date:'10/01/2020 15:30:55', text: this.activeMessage, status:'sent'})
+            this.activeMessage = '';
+            this.botResponse();
         }
 
     }
