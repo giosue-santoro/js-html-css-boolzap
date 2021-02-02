@@ -37,7 +37,7 @@
                 </div>
                 
                 <div class="main-content">
-                    <div v-for='el in contacts[contactIndex].messages'>
+                    <div v-for='el in contacts[contactIndex].messages' :class="displayMessage(el)">
                         {{el.text}}
                     </div>
                 </div>

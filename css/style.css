@@ -49,7 +49,6 @@
   height: calc(100% - 100px);
   position: absolute;
   right: 0;
-  background-image: url("../img/background.jpg");
   overflow: hidden;
 }
 
@@ -166,9 +165,22 @@ img {
   position: absolute;
   left: 120px;
 }
+
+.user-container {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: calc(100% - 240px);
+}
 /* /SIDEBAR */
 
 /* MAIN */
+.main-content {
+  height: calc(100% - 80px);
+  background-image: url("../img/background.jpg");
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
 .main-user {
   height: 80px;
   background-color: #eaeaea;
@@ -188,8 +200,9 @@ img {
   min-height: 50px;
   border-radius: 10px;
   padding: 15px;
-  left: 715px;
+  left: 695px;
   top: 30px;
+  margin: 20px 0;
 }
 
 .sent-message:after {
@@ -214,6 +227,7 @@ img {
   padding: 15px;
   left: 35px;
   top: 60px;
+  margin: 10px 0;
 }
 
 .received-message:after {
