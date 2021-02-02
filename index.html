@@ -19,13 +19,13 @@
 
                 <div class="main-user">
                     <div>
-                        <img :src="contacts[0].avatar" class="padding-10">
+                        <img :src="contacts[contactIndex].avatar" class="padding-10">
                         <div class="main-name">
                             <div class="font-22">
-                                {{contacts[0].name}}
+                                {{contacts[contactIndex].name}}
                             </div>
                             <div class="grey">
-                                Ultimo accesso oggi alle 
+                                Ultimo accesso in data {{lastLogIn(contactIndex)}}
                             </div>
                         </div>
                     </div>

@@ -118,8 +118,14 @@ var app = new Vue({
             this.contacts[this.contactIndex].messages.push({date:'10/01/2020 15:30:55', text: this.activeMessage, status:'sent'})
             this.activeMessage = '';
             this.botResponse();
-        }
+        },
 
+        lastLogIn: function(i) {
+            const messages = this.contacts[i].messages;
+            const lastIndex = messages.length - 1;
+            const lastAccess = messages[lastIndex].date;
+            return lastAccess;
+        }
     }
 
 })
