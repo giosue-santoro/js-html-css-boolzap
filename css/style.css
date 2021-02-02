@@ -158,6 +158,7 @@ img {
 .users {
   height: 100px;
   border-bottom: 1px solid #eaeaea;
+  cursor: pointer;
 }
 
 .users span {

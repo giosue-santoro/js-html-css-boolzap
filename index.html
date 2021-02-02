@@ -37,11 +37,8 @@
                 </div>
                 
                 <div class="main-content">
-                    <div class="sent-message">
-                        Prova Mandato
-                    </div>
-                    <div class="received-message">
-                        Prova Ricevuto
+                    <div v-for='el in contacts[contactIndex].messages'>
+                        {{el.text}}
                     </div>
                 </div>
                 
@@ -85,7 +82,7 @@
                 </div>
 
                 <div class="user-container">
-                    <div class="users padding-10" v-for="el in contacts">
+                    <div class="users padding-10" v-for="(el, i) in contacts" @click="selectedUser(i)">
                         <img :src="el.avatar">
                         <span>{{el.name}}</span>
                     </div>

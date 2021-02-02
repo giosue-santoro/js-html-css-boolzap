@@ -2,6 +2,7 @@ var app = new Vue({
     el:'#app',
     
     data: {
+        contactIndex: 0,
         contacts: [
             {
                 name: 'Michele',
@@ -91,8 +92,21 @@ var app = new Vue({
     },
 
     methods:  {
-       
+
+        selectedUser: function(i) {
+            this.contactIndex = i
+        },
+        
+        displayMessage: function(x) {
+            if (x.status === 'sent') {
+                return 'sent-message'
+            } else {
+                return 'received-message'
+            }
+        }
+
     }
+
 })
 
 Vue.config.devtools = true;
