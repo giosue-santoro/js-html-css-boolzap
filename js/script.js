@@ -2,8 +2,10 @@ var app = new Vue({
     el:'#app',
     
     data: {
+        
         contactIndex: 0,
         activeMessage: '',
+        searchBar: '',
         contacts: [
             {
                 name: 'Michele',
@@ -125,7 +127,18 @@ var app = new Vue({
             const lastIndex = messages.length - 1;
             const lastAccess = messages[lastIndex].date;
             return lastAccess;
+        },
+
+        searchContact: function() {
+            this.contacts.forEach((el) => {
+              if (el.name.toLowerCase().startsWith(this.searchBar.toLowerCase())) {
+                el.visible = true;
+              } else {
+                el.visible = false;
+              }
+            });
         }
+
     }
 
 })

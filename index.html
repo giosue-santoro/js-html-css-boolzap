@@ -78,16 +78,18 @@
 
                 <div class="search-bar">
                     <i class="fas fa-search grey"></i>
-                    <input type="text" placeholder="Cerca o inizia una nuova chat">
+                    <input type="text" v-model="searchBar" @input="searchContact" placeholder="Cerca o inizia una nuova chat">
                 </div>
 
                 <div class="user-container">
-                    <div class="users padding-10" v-for="(el, i) in contacts" @click="selectedUser(i)">
+                    
+                    <div class="users padding-10" v-for="(el, i) in contacts" v-if='(el.visible === true)' @click="selectedUser(i)">
                         <img :src="el.avatar">
                         <span>{{el.name}}</span>
                     </div>
                     
                 </div>
+                
             </div>
             <!-- /SIDEBAR -->
 
@@ -96,7 +98,7 @@
             <div class="box-bottom">
 
                 <i class="far fa-smile bottom-left"></i>
-                <input type="text" placeholder="Scrivi un messaggio" v-model="activeMessage" id="text-box" v-on:keyup.enter="messagePush">
+                <input type="text" placeholder="Scrivi un messaggio" v-model="activeMessage" v-on:keyup.enter="messagePush">
                 <i class="fas fa-microphone bottom-right"></i>
 
             </div>
