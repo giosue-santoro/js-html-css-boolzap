@@ -79,6 +79,10 @@ img {
 .grey {
   color: #b1b1b1;
 }
+
+.fas {
+  cursor: pointer;
+}
 /* /GENERAL & CONTAINERS */
 
 /* SIDEBAR */
@@ -96,6 +100,7 @@ img {
 .notifications {
   height: 90px;
   background-color: #8edafc;
+  cursor: pointer;
 }
 
 .bell-container {
@@ -164,10 +169,10 @@ img {
   background-color: #d3d2d2;
 }
 
-.users span {
+.users div {
   font-size: 24px;
-  position: absolute;
-  left: 120px;
+  vertical-align: 2.2em;
+  margin-left: 20px;
 }
 
 .user-container {

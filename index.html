@@ -39,6 +39,7 @@
                 <div class="main-content">
                     <div v-for='el in contacts[contactIndex].messages' :class="displayMessage(el)">
                         {{el.text}}
+                        <div class="grey">{{el.date}}</div>
                     </div>
                 </div>
                 
@@ -85,7 +86,7 @@
                     
                     <div class="users padding-10" v-for="(el, i) in contacts" v-if='(el.visible === true)' @click="selectedUser(i)">
                         <img :src="el.avatar">
-                        <span>{{el.name}}</span>
+                        <div class="inline-block">{{el.name}}</div>
                     </div>
                     
                 </div>

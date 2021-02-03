@@ -90,6 +90,74 @@ var app = new Vue({
                     }
                 ],
             },
+            {
+                name: 'Filippo',
+                avatar: 'img/avatar_5.jpg',
+                visible: true,
+                messages: [
+                    {
+                        date: '10/01/2020 15:30:55',
+                        text: 'Lo sai che ha aperto una nuova pizzeria?',
+                        status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 15:50:00',
+                        text: 'Allora andiamo a mangiare lì stasera',
+                        status: 'received'
+                    }
+                ],
+            },
+            {
+                name: 'Martina',
+                avatar: 'img/avatar_6.jpg',
+                visible: true,
+                messages: [
+                    {
+                        date: '10/01/2020 15:30:55',
+                        text: 'Andiamo!',
+                        status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 15:50:00',
+                        text: 'Dove?',
+                        status: 'received'
+                    }
+                ],
+            },
+            {
+                name: 'Marco',
+                avatar: 'img/avatar_7.jpg',
+                visible: true,
+                messages: [
+                    {
+                        date: '10/01/2020 15:30:55',
+                        text: 'Chi sei?',
+                        status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 15:50:00',
+                        text: 'Un tuo collega',
+                        status: 'received'
+                    }
+                ],
+            },
+            {
+                name: 'Giovanna',
+                avatar: 'img/avatar_8.jpg',
+                visible: true,
+                messages: [
+                    {
+                        date: '10/01/2020 15:30:55',
+                        text: 'A che ora torni domani?',
+                        status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 15:50:00',
+                        text: 'Non lo so ti faccio sapere',
+                        status: 'received'
+                    }
+                ],
+            }
         ]
         
     },
