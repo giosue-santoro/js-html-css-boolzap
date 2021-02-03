@@ -179,13 +179,13 @@ var app = new Vue({
         botResponse: function() {
             setTimeout(() => {
                 this.activeMessage = 'ok';
-                this.contacts[this.contactIndex].messages.push({date:'10/01/2020 15:30:55', text: this.activeMessage, status:'received'})
+                this.contacts[this.contactIndex].messages.push({date: this.messageDate(), text: this.activeMessage, status:'received'})
                 this.activeMessage='';
             }, 1000);
         },
 
         messagePush: function() {
-            this.contacts[this.contactIndex].messages.push({date:'10/01/2020 15:30:55', text: this.activeMessage, status:'sent'})
+            this.contacts[this.contactIndex].messages.push({date: this.messageDate(), text: this.activeMessage, status:'sent'})
             this.activeMessage = '';
             this.botResponse();
         },
@@ -205,7 +205,13 @@ var app = new Vue({
                 el.visible = false;
               }
             });
-        }
+        },
+
+        messageDate: function() {
+          const date = dayjs().format();
+          const actualDate = dayjs(date).format('DD/MM/YYYY HH:mm:ss');
+          return actualDate
+        },
 
     }
 
