@@ -44,7 +44,7 @@
                         <div class="msg-icon inline-block" @click="infoMenu(i)"><i class="fa fa-angle-down"></i>
                             <div class="info-menu display-none">
                               <div>More Informations</div>
-                              <div>Delete message</div>
+                              <div @click="removeMessage(i)">Delete message</div>
                             </div>
                         </div>
                         <div class="grey">{{el.date}}</div>

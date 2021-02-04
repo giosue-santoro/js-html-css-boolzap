@@ -216,7 +216,13 @@ var app = new Vue({
         infoMenu: function(i) {
             const menu = document.getElementsByClassName('info-menu')[i];
             menu.classList.toggle('show');
+        },
+
+        removeMessage: function(i) {
+            const element = this.contacts[this.contactIndex].messages;
+            
         }
+
     }
 
 })
