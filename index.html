@@ -38,10 +38,18 @@
                 </div>
                 
                 <div class="main-content">
-                    <div v-for='el in contacts[contactIndex].messages' :class="displayMessage(el)">
-                        {{el.text}}
+
+                    <div v-for='(el, i) in contacts[contactIndex].messages' :class="displayMessage(el)">
+                        <span>{{el.text}}</span>
+                        <div class="msg-icon inline-block" @click="infoMenu(i)"><i class="fa fa-angle-down"></i>
+                            <div class="info-menu display-none">
+                              <div>More Informations</div>
+                              <div>Delete message</div>
+                            </div>
+                        </div>
                         <div class="grey">{{el.date}}</div>
                     </div>
+
                 </div>
                 
             </div>
@@ -84,12 +92,10 @@
                 </div>
 
                 <div class="user-container">
-                    
                     <div class="users padding-10" v-for="(el, i) in contacts" v-if='(el.visible === true)' @click="selectedUser(i)">
                         <img :src="el.avatar">
                         <div class="inline-block">{{el.name}}</div>
                     </div>
-                    
                 </div>
                 
             </div>
@@ -98,11 +104,9 @@
             <!-- FOOTER -->
 
             <div class="box-bottom">
-
                 <i class="far fa-smile bottom-left"></i>
                 <input type="text" placeholder="Scrivi un messaggio" v-model="activeMessage" v-on:keyup.enter="messagePush">
                 <i class="fas fa-microphone bottom-right"></i>
-
             </div>
 
             <!-- /FOOTER -->

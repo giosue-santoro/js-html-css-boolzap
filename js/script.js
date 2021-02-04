@@ -213,6 +213,10 @@ var app = new Vue({
           return actualDate
         },
 
+        infoMenu: function(i) {
+            const menu = document.getElementsByClassName('info-menu')[i];
+            menu.classList.toggle('show');
+        }
     }
 
 })
