@@ -45,11 +45,10 @@
 
 .main {
   border-left: 1px solid blue;
-  width: 65%;
+  min-width: 65%;
   height: calc(100% - 100px);
   position: absolute;
   right: 0;
-  overflow: hidden;
 }
 
 img {
@@ -184,7 +183,6 @@ img {
 }
 
 .user-container {
-  overflow-x: hidden;
   overflow-y: scroll;
   height: calc(100% - 240px);
 }
@@ -194,7 +192,6 @@ img {
 .main-content {
   height: calc(100% - 80px);
   background-image: url("../img/background.jpg");
-  overflow-x: hidden;
   overflow-y: scroll;
 }
 
@@ -217,7 +214,7 @@ img {
   min-height: 50px;
   border-radius: 10px;
   padding: 15px;
-  left: 695px;
+  left: 70%;
   top: 30px;
   margin: 50px 0 0 0;
 }
@@ -242,7 +239,7 @@ img {
   min-height: 50px;
   border-radius: 10px;
   padding: 15px;
-  left: 35px;
+  left: 5%;
   top: 60px;
   margin: 0 0 50px 0;
 }
