@@ -218,9 +218,9 @@ var app = new Vue({
             menu.classList.toggle('show');
         },
 
-        removeMessage: function(i) {
-            const element = this.contacts[this.contactIndex].messages;
-            
+        removeMessage: function(index) {
+            this.contacts[this.contactIndex].messages.splice(index, 1);
+            console.log(index);
         }
 
     }
